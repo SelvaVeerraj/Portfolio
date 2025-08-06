@@ -10,7 +10,7 @@ body {
   background-color: rgb(14, 14, 14);
 }
 
-/* body > .side-profile {
+body > .side-profile {
   width: 400px;
   height: 100vh;
   float: left;
@@ -26,7 +26,7 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 999px;
-} */
+}
 
 a{
   color: white;
@@ -326,17 +326,24 @@ ul{
 
 @media screen and (max-width: 426px) {
   .side-profile {
-    width: 0px;
-    left: 0px;
+    position: fixed;
+    left: -400px;
+    top: 0;
+    height: 100vh;
+    transition: left 0.3s ease;
+    z-index: 1500;
   }
 
   .side-profile.active {
     left: 0;
   }
 
+  hr{
+    width: 426px;
+  }
+
   .nav-toggle {
-    font-size: 18px;
-    padding: 8px 12px;
+    display: block;
   }
 
   .home > h1{
